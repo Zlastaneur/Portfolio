@@ -1,0 +1,79 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*:focus,
+*:hover {
+    outline: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.banner {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+
+    .name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Roboto", "Dancing Script", Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        font-size: 2em;
+        vertical-align: middle;
+    }
+    .navbar {
+        ul {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0;
+
+            li {
+                margin: 0 5px;
+                font-size: 1.7em;
+            }
+
+            .slash {
+                cursor: default;
+                font-size: 2.7em;
+            }
+        }
+    }
+
+    .contact {
+        height: 100%;
+        .btn {
+            background-color: #283746;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 #b4b4b4;
+            a {
+                color: white;
+            }
+            i {
+                margin-left: 5px;
+            }
+        }
+    }
+}
