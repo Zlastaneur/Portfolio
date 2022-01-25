@@ -4,22 +4,6 @@ body {
   font-family: "Montserrat", "Roboto", Arial, Helvetica, sans-serif;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .container {
-  padding-top: 124px;
-}
-
 *,
 *:focus,
 *:hover {
@@ -38,14 +22,29 @@ a {
   text-decoration: none;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky .container {
+  padding: 0px 10px !important;
+  transition: padding 0.5s;
+}
+
+.sticky + .container {
+  padding-top: 106px;
+}
+
 .banner {
   width: 100%;
   background-color: white;
+  z-index: 100;
 }
 .banner .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 10px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -106,14 +105,21 @@ a {
   font-weight: 600;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
 .about {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 100px 0;
-  background-color: #101f47;
+  padding: 120px 20px;
+  background: linear-gradient(to top, #101f47 0%, #101f47 90%, #172b63 0%, #172b63 90%);
 }
 .about .photo {
   width: 150px;
@@ -125,6 +131,7 @@ a {
   justify-content: center;
   max-width: 800px;
   color: white;
+  padding-top: 20px;
 }
 .about .presentation a {
   text-decoration: none;
@@ -136,12 +143,62 @@ a {
 .about .presentation .title {
   font-size: 1.8em;
   text-align: center;
+  margin-bottom: 10px;
 }
 .about .presentation .text {
   max-width: 600px;
   text-align: center;
   font-size: 1.3em;
   font-weight: 300;
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 100px 20px 0 20px;
+}
+.skills .card {
+  position: relative;
+  top: -150px;
+  background-color: #353535;
+  color: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+.skills .card .title {
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 1.4em;
+}
+.skills .card .row {
+  border-radius: 15px;
+  background-color: white;
+  margin: 20px 0;
+  color: #353535;
+  font-size: 1em;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  margin: 15px 10px;
+  width: 35%;
+  cursor: default;
+}
+.skills .card .row i,
+.skills .card .row span,
+.skills .card .row svg {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+.skills .paragraph {
+  max-width: 600px;
 }
 
 /*# sourceMappingURL=style.css.map */
