@@ -1,0 +1,95 @@
+#skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 100px 20px 0 20px;
+
+    .card {
+        position: relative;
+        top: -150px;
+        background-color: $secondary-color;
+        color: white;
+        padding: 20px;
+        width: 400px;
+        border-radius: 15px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+
+        .title {
+            text-align: center;
+            text-transform: uppercase;
+            width: 100%;
+            font-size: 1.4em;
+        }
+
+        .row {
+            border-radius: 15px;
+            background-color: white;
+            margin: 20px 0;
+            color: $secondary-color;
+            font-size: 1em;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 0;
+            margin: 15px 10px;
+            width: 35%;
+            cursor: default;
+
+            i,
+            span,
+            svg {
+                font-size: 2.5em;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .paragraph {
+        max-width: 600px;
+        padding-left: 20px;
+
+        .languages {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 80px auto;
+            max-width: 300px;
+
+            border-radius: 10px;
+            padding: 20px 0;
+            /*background-color: $primary-color;
+            box-shadow: 0 4px 8px 0 #b4b4b4;
+            color: white;
+            */
+
+            .title {
+                margin: 0 0 20px 0;
+                text-transform: uppercase;
+            }
+
+            .row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                width: 100%;
+
+                svg {
+                    margin-right: 5px;
+                }
+
+                .column {
+                    padding: 10px;
+                    text-align: center;
+                }
+
+                .french {
+                    border: none;
+                    border-right: 1px dotted white;
+                }
+            }
+        }
+    }
+}

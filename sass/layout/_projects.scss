@@ -1,0 +1,29 @@
+#projects {
+    .firstRow {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background: linear-gradient(
+            80deg,
+            $primary-color_darker 0%,
+            $primary-color_darker 50%,
+            $primary-color 0%,
+            $primary-color 50%
+        );
+    }
+    .secondRow {
+        background: linear-gradient(
+            -80deg,
+            $primary-color 0%,
+            $primary-color 50%,
+            $primary-color_darker 0%,
+            $primary-color_darker 50%
+        );
+    }
+    /*background-color: #101f47;*/
+
+    .projectCard {
+        height: 700px;
+        max-width: 500px;
+    }
+}

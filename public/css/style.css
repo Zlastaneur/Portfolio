@@ -22,6 +22,86 @@ a {
   text-decoration: none;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+/*$primary-color_dark: ;
+$secondary-color: ;
+
+*/
+#banner {
+  width: 100%;
+  background-color: white;
+  z-index: 100;
+}
+#banner .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+#banner .name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 2rem;
+  vertical-align: middle;
+}
+#banner .name a {
+  color: #172b63;
+}
+#banner #navbar ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+#banner #navbar ul li {
+  color: #292929;
+  margin: 0 5px;
+  font-size: 1.7em;
+}
+#banner #navbar ul li a {
+  color: #292929;
+}
+#banner #navbar ul li a:hover {
+  color: #172b63;
+}
+#banner #navbar ul .slash {
+  cursor: default;
+  font-size: 2.8em;
+  height: 54px;
+  line-height: 48px;
+  margin: 0 10px;
+}
+#banner .contact {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin-left: auto;
+  font-size: 1.2em;
+}
+#banner .contact a {
+  font-weight: 700;
+  color: #213364;
+}
+#banner .contact i {
+  font-size: 1.7em;
+  margin-left: 10px;
+}
+#banner .contact a:hover > .far {
+  font-weight: 600;
+}
+
 .sticky {
   position: fixed;
   top: 0;
@@ -36,83 +116,7 @@ a {
   padding-top: 106px;
 }
 
-.banner {
-  width: 100%;
-  background-color: white;
-  z-index: 100;
-}
-.banner .container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 10px;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-}
-.banner .name {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 800;
-  font-size: 2rem;
-  vertical-align: middle;
-}
-.banner .name a {
-  color: #213364;
-}
-.banner .navbar ul {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  vertical-align: middle;
-  padding-left: 10px;
-}
-.banner .navbar ul li {
-  color: #353535;
-  margin: 0 5px;
-  font-size: 1.7em;
-}
-.banner .navbar ul li a {
-  color: #353535;
-}
-.banner .navbar ul li a:hover {
-  color: #213364;
-}
-.banner .navbar ul .slash {
-  cursor: default;
-  font-size: 2.8em;
-  height: 54px;
-  line-height: 48px;
-  margin: 0 10px;
-}
-.banner .contact {
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  margin-left: auto;
-  font-size: 1.2em;
-}
-.banner .contact a {
-  font-weight: 700;
-  color: #213364;
-}
-.banner .contact i {
-  font-size: 1.7em;
-  margin-left: 10px;
-}
-.banner .contact a:hover > .far {
-  font-weight: 600;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
-
-.about {
+#about {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -121,10 +125,10 @@ a {
   padding: 120px 20px;
   background: linear-gradient(to top, #101f47 0%, #101f47 90%, #172b63 0%, #172b63 90%);
 }
-.about .photo {
+#about .photo {
   width: 150px;
 }
-.about .presentation {
+#about .presentation {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -133,35 +137,35 @@ a {
   color: white;
   padding-top: 20px;
 }
-.about .presentation a {
+#about .presentation a {
   text-decoration: none;
   color: white;
 }
-.about .presentation a:hover {
+#about .presentation a:hover {
   font-weight: 600;
 }
-.about .presentation .title {
+#about .presentation .title {
   font-size: 1.8em;
   text-align: center;
   margin-bottom: 10px;
 }
-.about .presentation .text {
+#about .presentation .text {
   max-width: 600px;
   text-align: center;
   font-size: 1.3em;
   font-weight: 300;
 }
 
-.skills {
+#skills {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   padding: 100px 20px 0 20px;
 }
-.skills .card {
+#skills .card {
   position: relative;
   top: -150px;
-  background-color: #353535;
+  background-color: #292929;
   color: white;
   padding: 20px;
   width: 400px;
@@ -170,17 +174,17 @@ a {
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
-.skills .card .title {
+#skills .card .title {
   text-align: center;
   text-transform: uppercase;
   width: 100%;
   font-size: 1.4em;
 }
-.skills .card .row {
+#skills .card .row {
   border-radius: 15px;
   background-color: white;
   margin: 20px 0;
-  color: #353535;
+  color: #292929;
   font-size: 1em;
   font-weight: 600;
   display: flex;
@@ -191,14 +195,66 @@ a {
   width: 35%;
   cursor: default;
 }
-.skills .card .row i,
-.skills .card .row span,
-.skills .card .row svg {
+#skills .card .row i,
+#skills .card .row span,
+#skills .card .row svg {
   font-size: 2.5em;
   margin-bottom: 10px;
 }
-.skills .paragraph {
+#skills .paragraph {
   max-width: 600px;
+  padding-left: 20px;
+}
+#skills .paragraph .languages {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 80px auto;
+  max-width: 300px;
+  border-radius: 10px;
+  padding: 20px 0;
+  /*background-color: $primary-color;
+  box-shadow: 0 4px 8px 0 #b4b4b4;
+  color: white;
+  */
+}
+#skills .paragraph .languages .title {
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
+#skills .paragraph .languages .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+#skills .paragraph .languages .row svg {
+  margin-right: 5px;
+}
+#skills .paragraph .languages .row .column {
+  padding: 10px;
+  text-align: center;
+}
+#skills .paragraph .languages .row .french {
+  border: none;
+  border-right: 1px dotted white;
+}
+
+#projects {
+  /*background-color: #101f47;*/
+}
+#projects .firstRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background: linear-gradient(80deg, #101f47 0%, #101f47 50%, #172b63 0%, #172b63 50%);
+}
+#projects .secondRow {
+  background: linear-gradient(-80deg, #172b63 0%, #172b63 50%, #101f47 0%, #101f47 50%);
+}
+#projects .projectCard {
+  height: 700px;
+  max-width: 500px;
 }
 
 /*# sourceMappingURL=style.css.map */
