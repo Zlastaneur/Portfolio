@@ -31,7 +31,6 @@ a {
 
 /*$primary-color_dark: ;
 $secondary-color: ;
-
 */
 #banner {
   width: 100%;
@@ -161,6 +160,7 @@ $secondary-color: ;
   flex-direction: row;
   justify-content: space-evenly;
   padding: 100px 20px 0 20px;
+  background: linear-gradient(175deg, transparent calc(80% +1px), #172b63 20.5%);
 }
 #skills .card {
   position: relative;
@@ -213,10 +213,9 @@ $secondary-color: ;
   max-width: 300px;
   border-radius: 10px;
   padding: 20px 0;
-  /*background-color: $primary-color;
-  box-shadow: 0 4px 8px 0 #b4b4b4;
+  background-color: #172b63;
   color: white;
-  */
+  box-shadow: 0 4px 8px 0 #b4b4b4;
 }
 #skills .paragraph .languages .title {
   margin: 0 0 20px 0;
@@ -241,20 +240,57 @@ $secondary-color: ;
 }
 
 #projects {
-  /*background-color: #101f47;*/
+  position: relative;
+  background-color: transparent;
+  padding-bottom: 100px;
 }
-#projects .firstRow {
+#projects::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 100px);
+  clip-path: polygon(0% 0%, 100% 75px, 100% 100%, 0% calc(100% - 75px));
+  background-color: #172b63;
+}
+#projects .hero_content {
+  position: relative;
+  z-index: 1;
+}
+#projects .title {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  margin-bottom: 100px;
+}
+#projects .projectList {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  background: linear-gradient(80deg, #101f47 0%, #101f47 50%, #172b63 0%, #172b63 50%);
-}
-#projects .secondRow {
-  background: linear-gradient(-80deg, #172b63 0%, #172b63 50%, #101f47 0%, #101f47 50%);
+  flex-direction: column;
 }
 #projects .projectCard {
-  height: 700px;
-  max-width: 500px;
+  max-height: 500px;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 0 15px 15px 0;
+  margin-bottom: 50px;
+  padding: 40px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+#projects .projectCard:nth-child(even) {
+  display: flex;
+  align-self: flex-end;
+  border-radius: 15px 0 0 15px;
+}
+#projects .projectCard .image {
+  margin-right: 50px;
+}
+#projects .projectCard .image .website_gif {
+  width: 412px;
+  height: 232px;
 }
 
 /*# sourceMappingURL=style.css.map */
