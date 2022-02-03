@@ -270,27 +270,102 @@ $secondary-color: ;
   flex-direction: column;
 }
 #projects .projectCard {
-  max-height: 500px;
-  max-width: 800px;
+  height: 350px;
+  width: 525px;
   background-color: white;
   border-radius: 0 15px 15px 0;
-  margin-bottom: 50px;
-  padding: 40px;
+  margin-bottom: 100px;
+  padding: 40px 0 40px 60px;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
+  transition: width 0.8s;
+  position: relative;
+}
+#projects .projectCard .image {
+  z-index: 20;
+}
+#projects .projectCard .image .website_gif {
+  width: 412px;
+  height: 232px;
+}
+#projects .projectCard .projectParagraph {
+  position: absolute;
+  width: 310px;
+  height: 155px;
+  left: 15%;
+  z-index: 10;
+  overflow: hidden;
+  /*overflow-wrap: break-word;
+  overflow: hidden;
+  word-wrap: break-word;
+  hyphens: auto;*/
+  transition: 1s ease;
+}
+#projects .projectCard .projectParagraph_open {
+  left: 60%;
+  transition: 1s ease;
+}
+#projects .projectCard .openButton {
+  min-height: 100%;
+  background-color: #292929;
+  color: white;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
 }
 #projects .projectCard:nth-child(even) {
   display: flex;
   align-self: flex-end;
   border-radius: 15px 0 0 15px;
+  padding: 40px 60px 40px 0;
 }
-#projects .projectCard .image {
-  margin-right: 50px;
+#projects .projectCard:nth-child(even) .image {
+  z-index: 20;
 }
-#projects .projectCard .image .website_gif {
+#projects .projectCard:nth-child(even) .image .website_gif {
   width: 412px;
   height: 232px;
+}
+#projects .projectCard:nth-child(even) .projectParagraph {
+  position: absolute;
+  width: 310px;
+  height: 155px;
+  left: auto;
+  right: 15%;
+  z-index: 10;
+  overflow: hidden;
+  /*overflow-wrap: break-word;
+  overflow: hidden;
+  word-wrap: break-word;
+  hyphens: auto;*/
+  transition: 0.8s ease;
+}
+#projects .projectCard:nth-child(even) .projectParagraph_open {
+  right: 58%;
+  transition: 0.8s ease;
+}
+#projects .projectCard:nth-child(even) .openButton {
+  min-height: 100%;
+  background-color: #292929;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+#projects .projectCard:nth-child(even) .open {
+  width: 850px;
+  transition: width 0.8s;
+}
+#projects .open {
+  width: 850px;
+  transition: width 1s;
 }
 
 /*# sourceMappingURL=style.css.map */
