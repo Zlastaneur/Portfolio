@@ -32,7 +32,7 @@
     }
 
     .projectCard {
-        height: 350px;
+        height: 400px;
         width: 525px;
         background-color: white;
         border-radius: 0 15px 15px 0;
@@ -46,12 +46,31 @@
         transition: width 0.8s;
         position: relative;
 
-        .image {
+        .thumbnail {
             z-index: 20;
+            align-self: flex-end;
+            height: 100%;
+
+            .website {
+                text-align: center;
+                margin: 0 0 40px 0;
+                font-size: 1.5em;
+                font-weight: 600;
+            }
+
+            figure {
+                margin: 0;
+                width: 415px;
+                overflow: hidden;
+            }
 
             .website_gif {
-                width: 412px;
-                height: 232px;
+                width: 100%;
+                transition: transform 0.15s ease-in-out;
+            }
+
+            .website_gif:hover {
+                transform: scale(1.1);
             }
         }
 
@@ -62,15 +81,25 @@
             left: 15%;
             z-index: 10;
             overflow: hidden;
-            /*overflow-wrap: break-word;
-            overflow: hidden;
-            word-wrap: break-word;
-            hyphens: auto;*/
             transition: 1s ease;
+
+            .badge {
+                font-size: 2em;
+                margin: 0;
+
+                i {
+                    margin-right: 15px;
+                    color: $primary-color_darker;
+
+                    &:nth-child(even) {
+                        color: $primary-color;
+                    }
+                }
+            }
         }
 
         .projectParagraph_open {
-            left: 60%;
+            left: 58%;
             transition: 1s ease;
         }
 
@@ -113,6 +142,7 @@
                 word-wrap: break-word;
                 hyphens: auto;*/
                 transition: 0.8s ease;
+                text-align: end;
             }
 
             .projectParagraph_open {
