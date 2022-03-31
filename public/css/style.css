@@ -30,9 +30,6 @@ a {
   width: 100%;
 }
 
-/*$primary-color_dark: ;
-$secondary-color: ;
-*/
 #banner {
   width: 100%;
   background-color: white;
@@ -55,7 +52,7 @@ $secondary-color: ;
   vertical-align: middle;
 }
 #banner .name a {
-  color: #172b63;
+  color: #152654;
 }
 #banner #navbar ul {
   display: flex;
@@ -74,7 +71,7 @@ $secondary-color: ;
   color: #292929;
 }
 #banner #navbar ul li a:hover {
-  color: #172b63;
+  color: #152654;
 }
 #banner #navbar ul .slash {
   cursor: default;
@@ -124,7 +121,16 @@ $secondary-color: ;
   justify-content: center;
   width: 100%;
   padding: 120px 20px;
-  background: linear-gradient(to top, #101f47 0%, #101f47 90%, #172b63 0%, #172b63 90%);
+  /*background: linear-gradient(
+      to top,
+      $primary-color_darker 0%,
+      $primary-color_darker 90%,
+      $primary-color 0%,
+      $primary-color 90%
+  );*/
+  background-image: url(../../public/img/background_cover.jpg);
+  background-size: cover;
+  background-position: top;
 }
 #about .photo {
   width: 150px;
@@ -154,7 +160,7 @@ $secondary-color: ;
   max-width: 600px;
   text-align: center;
   font-size: 1.3em;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 #skills {
@@ -162,7 +168,7 @@ $secondary-color: ;
   flex-direction: row;
   justify-content: space-evenly;
   padding: 100px 20px 0 20px;
-  background: linear-gradient(175deg, transparent calc(80% +1px), #172b63 20.5%);
+  background: linear-gradient(175deg, transparent calc(80% +1px), #152654 20.5%);
 }
 #skills .card {
   position: relative;
@@ -215,7 +221,7 @@ $secondary-color: ;
   max-width: 300px;
   border-radius: 10px;
   padding: 20px 0;
-  background-color: #172b63;
+  background-color: #152654;
   color: white;
   box-shadow: 0 4px 8px 0 #b4b4b4;
 }
@@ -235,10 +241,10 @@ $secondary-color: ;
 #skills .paragraph .languages .row .column {
   padding: 10px;
   text-align: center;
-}
-#skills .paragraph .languages .row .french {
-  border: none;
-  border-right: 1px dotted white;
+  background-color: white;
+  border-radius: 10px;
+  width: 45%;
+  color: #152654;
 }
 
 #projects {
@@ -254,7 +260,7 @@ $secondary-color: ;
   width: 100%;
   height: calc(100% + 100px);
   clip-path: polygon(0% 0%, 100% 75px, 100% 100%, 0% calc(100% - 75px));
-  background-color: #172b63;
+  background-color: #152654;
 }
 #projects .hero_content {
   position: relative;
@@ -275,7 +281,7 @@ $secondary-color: ;
   height: 400px;
   width: 525px;
   background-color: white;
-  border-radius: 0 15px 15px 0;
+  border-radius: 15px;
   margin-bottom: 100px;
   padding: 40px 0 40px 60px;
   display: flex;
@@ -285,6 +291,9 @@ $secondary-color: ;
   box-sizing: border-box;
   transition: width 0.8s;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateX(-10%);
 }
 #projects .projectCard .thumbnail {
   z-index: 20;
@@ -312,26 +321,32 @@ $secondary-color: ;
 #projects .projectCard .projectParagraph {
   position: absolute;
   width: 310px;
-  height: 155px;
+  height: 225px;
   left: 15%;
   z-index: 10;
   overflow: hidden;
   transition: 1s ease;
+  align-self: flex-end;
 }
 #projects .projectCard .projectParagraph .badge {
   font-size: 2em;
   margin: 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
 }
-#projects .projectCard .projectParagraph .badge i {
+#projects .projectCard .projectParagraph .badge i,
+#projects .projectCard .projectParagraph .badge svg {
   margin-right: 15px;
   color: #101f47;
 }
-#projects .projectCard .projectParagraph .badge i:nth-child(even) {
-  color: #172b63;
+#projects .projectCard .projectParagraph .badge i:nth-child(even),
+#projects .projectCard .projectParagraph .badge svg:nth-child(even) {
+  color: #152654;
 }
 #projects .projectCard .projectParagraph_open {
   left: 58%;
-  transition: 1s ease;
+  transition: 1s ease-out;
 }
 #projects .projectCard .openButton {
   min-height: 100%;
@@ -343,11 +358,16 @@ $secondary-color: ;
   padding: 5px;
   cursor: pointer;
 }
+#projects .projectCard .openButton .fas {
+  transition: all 0.8s ease-in;
+}
+#projects .projectCard .openButton .rotate {
+  transform: rotate(180deg);
+}
 #projects .projectCard:nth-child(even) {
   display: flex;
-  align-self: flex-end;
-  border-radius: 15px 0 0 15px;
   padding: 40px 60px 40px 0;
+  transform: translateX(10%);
 }
 #projects .projectCard:nth-child(even) .image {
   z-index: 20;
@@ -357,23 +377,21 @@ $secondary-color: ;
   height: 232px;
 }
 #projects .projectCard:nth-child(even) .projectParagraph {
-  position: absolute;
-  width: 310px;
-  height: 155px;
   left: auto;
   right: 15%;
-  z-index: 10;
-  overflow: hidden;
-  /*overflow-wrap: break-word;
-  overflow: hidden;
-  word-wrap: break-word;
-  hyphens: auto;*/
-  transition: 0.8s ease;
   text-align: end;
+}
+#projects .projectCard:nth-child(even) .projectParagraph .badge {
+  justify-content: flex-end;
+}
+#projects .projectCard:nth-child(even) .projectParagraph .badge i,
+#projects .projectCard:nth-child(even) .projectParagraph .badge svg {
+  margin-right: 0px;
+  margin-left: 15px;
 }
 #projects .projectCard:nth-child(even) .projectParagraph_open {
   right: 58%;
-  transition: 0.8s ease;
+  transition: 1s ease-out;
 }
 #projects .projectCard:nth-child(even) .openButton {
   min-height: 100%;

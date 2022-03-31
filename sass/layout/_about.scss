@@ -5,14 +5,16 @@
     justify-content: center;
     width: 100%;
     padding: 120px 20px;
-    background: linear-gradient(
+    /*background: linear-gradient(
         to top,
         $primary-color_darker 0%,
         $primary-color_darker 90%,
         $primary-color 0%,
         $primary-color 90%
-    );
-
+    );*/
+    background-image: url(../../public/img/background_cover.jpg);
+    background-size: cover;
+    background-position: top;
     .photo {
         width: 150px;
     }
@@ -45,7 +47,7 @@
             max-width: 600px;
             text-align: center;
             font-size: 1.3em;
-            font-weight: 300;
+            font-weight: 400;
         }
     }
 }

@@ -83,11 +83,10 @@
                 .column {
                     padding: 10px;
                     text-align: center;
-                }
-
-                .french {
-                    border: none;
-                    border-right: 1px dotted white;
+                    background-color: white;
+                    border-radius: 10px;
+                    width: 45%;
+                    color: $primary-color;
                 }
             }
         }

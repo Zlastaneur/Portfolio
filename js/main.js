@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const openButton = document.querySelectorAll(".openButton");
-    console.log(openButton);
 
     for (let i = 0; i < openButton.length; i++) {
         openButton[i].addEventListener("click", openTheBox);
@@ -19,19 +18,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function openTheBox() {
         const card = this.closest(".projectCard");
-        console.log(this);
         const text = card.querySelector(".projectParagraph");
-        console.log(text);
+        const arrow = card.querySelector(".fas");
 
-        console.log(card);
         if (card.classList.contains("open") == false) {
             console.log("Ouvert");
             card.classList.add("open");
             text.classList.add("projectParagraph_open");
+            arrow.classList.add("rotate");
         } else {
             console.log("Fermé");
             card.classList.remove("open");
             text.classList.remove("projectParagraph_open");
+            arrow.classList.remove("rotate");
         }
     }
 });
