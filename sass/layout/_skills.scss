@@ -5,7 +5,7 @@
     padding: 100px 20px 0 20px;
     background: linear-gradient(175deg, transparent calc(80% +1px), $primary-color 20.5%);
 
-    .card {
+    .skillCard {
         position: relative;
         top: -150px;
         background-color: $secondary-color;
@@ -52,16 +52,27 @@
         max-width: 600px;
         padding-left: 20px;
 
+        &.js-scroll{
+            opacity: 0;
+            transition: opacity 500ms;
+            
+            &.scrolled {
+                opacity: 1;
+        
+                &.fadeIn {
+                    animation: fadeInBottom 750ms ease-in-out both;
+                }
+            }
+        }
         .languages {
             display: flex;
             align-items: center;
             flex-direction: column;
             margin: 80px auto;
             max-width: 300px;
-
             border-radius: 10px;
             padding: 20px 0;
-            background-color: $primary-color;
+            background-color: $primary-color-darker;
             color: white;
             box-shadow: 0 4px 8px 0 #b4b4b4;
 
@@ -86,9 +97,23 @@
                     background-color: white;
                     border-radius: 10px;
                     width: 45%;
-                    color: $primary-color;
+                    color: black;
                 }
             }
         }
+    }
+}
+
+@keyframes fadeInBottom {
+    0% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+        
+      }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0px);
+        opacity: 1;
     }
 }

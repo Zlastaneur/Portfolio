@@ -34,6 +34,7 @@ a {
   width: 100%;
   background-color: white;
   z-index: 100;
+  box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.25);
 }
 #banner .container {
   max-width: 1400px;
@@ -120,7 +121,8 @@ a {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 120px 20px;
+  height: 90vh;
+  padding: 20px;
   /*background: linear-gradient(
       to top,
       $primary-color_darker 0%,
@@ -128,9 +130,10 @@ a {
       $primary-color 0%,
       $primary-color 90%
   );*/
-  background-image: url(../../public/img/background_cover.jpg);
+  background-image: url(../../public/img/background.jpg);
   background-size: cover;
   background-position: top;
+  background-attachment: fixed;
 }
 #about .photo {
   width: 150px;
@@ -170,7 +173,7 @@ a {
   padding: 100px 20px 0 20px;
   background: linear-gradient(175deg, transparent calc(80% +1px), #152654 20.5%);
 }
-#skills .card {
+#skills .skillCard {
   position: relative;
   top: -150px;
   background-color: #292929;
@@ -182,13 +185,13 @@ a {
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
-#skills .card .title {
+#skills .skillCard .title {
   text-align: center;
   text-transform: uppercase;
   width: 100%;
   font-size: 1.4em;
 }
-#skills .card .row {
+#skills .skillCard .row {
   border-radius: 15px;
   background-color: white;
   margin: 20px 0;
@@ -203,15 +206,25 @@ a {
   width: 35%;
   cursor: default;
 }
-#skills .card .row i,
-#skills .card .row span,
-#skills .card .row svg {
+#skills .skillCard .row i,
+#skills .skillCard .row span,
+#skills .skillCard .row svg {
   font-size: 2.5em;
   margin-bottom: 10px;
 }
 #skills .paragraph {
   max-width: 600px;
   padding-left: 20px;
+}
+#skills .paragraph.js-scroll {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+#skills .paragraph.js-scroll.scrolled {
+  opacity: 1;
+}
+#skills .paragraph.js-scroll.scrolled.fadeIn {
+  animation: fadeInBottom 750ms ease-in-out both;
 }
 #skills .paragraph .languages {
   display: flex;
@@ -221,7 +234,7 @@ a {
   max-width: 300px;
   border-radius: 10px;
   padding: 20px 0;
-  background-color: #152654;
+  background-color: #101f47;
   color: white;
   box-shadow: 0 4px 8px 0 #b4b4b4;
 }
@@ -244,9 +257,21 @@ a {
   background-color: white;
   border-radius: 10px;
   width: 45%;
-  color: #152654;
+  color: black;
 }
 
+@keyframes fadeInBottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 #projects {
   position: relative;
   background-color: transparent;
@@ -261,6 +286,10 @@ a {
   height: calc(100% + 100px);
   clip-path: polygon(0% 0%, 100% 75px, 100% 100%, 0% calc(100% - 75px));
   background-color: #152654;
+  /* background-image: url(../../public/img/background_cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;*/
 }
 #projects .hero_content {
   position: relative;
@@ -283,17 +312,30 @@ a {
   background-color: white;
   border-radius: 15px;
   margin-bottom: 100px;
-  padding: 40px 0 40px 60px;
+  padding: 40px 0 40px 40px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  transition: width 0.8s;
+  transition: width 0.8s, opacity 200ms;
   position: relative;
   margin-left: auto;
   margin-right: auto;
   transform: translateX(-10%);
+  left: -5%;
+}
+#projects .projectCard.js-scroll {
+  opacity: 0;
+}
+#projects .projectCard.js-scroll.scrolled {
+  opacity: 1;
+}
+#projects .projectCard.js-scroll.scrolled.slideLeft {
+  animation: slideInLeft 750ms ease-in-out both;
+}
+#projects .projectCard.js-scroll.scrolled.slideRight {
+  animation: slideInRight 750ms ease-in-out both;
 }
 #projects .projectCard .thumbnail {
   z-index: 20;
@@ -349,7 +391,7 @@ a {
   transition: 1s ease-out;
 }
 #projects .projectCard .openButton {
-  min-height: 100%;
+  height: 100%;
   background-color: #292929;
   color: white;
   border-radius: 5px 0 0 5px;
@@ -366,8 +408,9 @@ a {
 }
 #projects .projectCard:nth-child(even) {
   display: flex;
-  padding: 40px 60px 40px 0;
+  padding: 40px 40px 40px 0;
   transform: translateX(10%);
+  left: 5%;
 }
 #projects .projectCard:nth-child(even) .image {
   z-index: 20;
@@ -410,6 +453,27 @@ a {
 #projects .open {
   width: 850px;
   transition: width 1s;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

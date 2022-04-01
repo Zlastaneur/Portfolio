@@ -4,7 +4,8 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 120px 20px;
+    height: 90vh;
+    padding: 20px;
     /*background: linear-gradient(
         to top,
         $primary-color_darker 0%,
@@ -12,9 +13,11 @@
         $primary-color 0%,
         $primary-color 90%
     );*/
-    background-image: url(../../public/img/background_cover.jpg);
+    background-image: url(../../public/img/background.jpg);
     background-size: cover;
     background-position: top;
+    background-attachment: fixed;
+
     .photo {
         width: 150px;
     }
