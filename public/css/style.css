@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   padding: 0;
   margin: 0;
@@ -275,7 +276,7 @@ a {
 #projects {
   position: relative;
   background-color: transparent;
-  padding-bottom: 100px;
+  padding-bottom: 170px;
 }
 #projects::before {
   content: "";
@@ -283,6 +284,7 @@ a {
   top: -100px;
   left: 0;
   width: 100%;
+  max-width: 100ù;
   height: calc(100% + 100px);
   clip-path: polygon(0% 0%, 100% 75px, 100% 100%, 0% calc(100% - 75px));
   background-color: #152654;
@@ -300,30 +302,87 @@ a {
   color: white;
   text-transform: uppercase;
   font-size: 1.8em;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 #projects .projectList {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 100%;
+}
+#projects .projectList .row {
+  width: 100%;
+  margin-bottom: 185px;
+  display: flex;
+  justify-content: center;
 }
 #projects .projectCard {
-  height: 400px;
-  width: 525px;
+  height: 450px;
+  width: 500px;
   background-color: white;
   border-radius: 15px;
-  margin-bottom: 100px;
-  padding: 40px 0 40px 40px;
+  margin: 60px 40px 0px 40px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column wrap;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  transition: width 0.8s, opacity 200ms;
+  transition: height, 0.8s, opacity 200ms;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  transform: translateX(-10%);
-  left: -5%;
+  /* &:nth-child(even) {
+       display: flex;
+       padding: 40px 40px 40px 0;
+       transform: translateX(10%);
+       left: 5%;
+
+       .image {
+           z-index: 20;
+
+           .website_gif {
+               width: 412px;
+               height: 232px;
+           }
+       }
+
+       .projectParagraph {
+           left: auto;
+           right: 15%;
+           text-align: end;
+           margin-top: auto;
+           margin-bottom: auto;
+
+           .badge {
+               justify-content: flex-end;
+
+               i,
+               svg {
+                   margin-right: 0px;
+                   margin-left: 15px;
+               }
+           }
+       }
+
+       .projectParagraph_open {
+           right: 58%;
+           transition: all 1s;
+       }
+
+       .openButton {
+           min-height: 100%;
+           background-color: $secondary-color;
+           color: white;
+           border-radius: 5px 5px 5px 0;
+           display: flex;
+           align-items: center;
+           padding: 5px;
+           cursor: pointer;
+       }
+
+       .open {
+           height: 550px;
+           transition: all 0.8s;
+       }
+   }*/
 }
 #projects .projectCard.js-scroll {
   opacity: 0;
@@ -339,8 +398,14 @@ a {
 }
 #projects .projectCard .thumbnail {
   z-index: 20;
-  align-self: flex-end;
-  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  justify-content: center;
+  padding: 20px 20px 0 20px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px 10px 0 0;
 }
 #projects .projectCard .thumbnail .website {
   text-align: center;
@@ -360,14 +425,23 @@ a {
 #projects .projectCard .thumbnail .website_gif:hover {
   transform: scale(1.1);
 }
+#projects .projectCard .thumbnail .line {
+  padding-top: 20px;
+  width: 25%;
+  border-bottom: 1px solid #152654;
+}
 #projects .projectCard .projectParagraph {
   position: absolute;
-  width: 310px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
   height: 225px;
-  left: 15%;
+  top: 25%;
+  left: 10%;
   z-index: 10;
   overflow: hidden;
-  transition: 1s ease;
+  transition: all 1s ease-out;
   align-self: flex-end;
 }
 #projects .projectCard .projectParagraph .badge {
@@ -387,16 +461,16 @@ a {
   color: #152654;
 }
 #projects .projectCard .projectParagraph_open {
-  left: 58%;
-  transition: 1s ease-out;
+  top: 58%;
+  transition: all 1s ease-out;
 }
 #projects .projectCard .openButton {
-  height: 100%;
-  background-color: #292929;
+  width: 100%;
+  background-color: #484848;
   color: white;
-  border-radius: 5px 0 0 5px;
+  border-radius: 0 0 10px 10px;
   display: flex;
-  align-items: center;
+  justify-content: center;
   padding: 5px;
   cursor: pointer;
 }
@@ -406,53 +480,10 @@ a {
 #projects .projectCard .openButton .rotate {
   transform: rotate(180deg);
 }
-#projects .projectCard:nth-child(even) {
-  display: flex;
-  padding: 40px 40px 40px 0;
-  transform: translateX(10%);
-  left: 5%;
-}
-#projects .projectCard:nth-child(even) .image {
-  z-index: 20;
-}
-#projects .projectCard:nth-child(even) .image .website_gif {
-  width: 412px;
-  height: 232px;
-}
-#projects .projectCard:nth-child(even) .projectParagraph {
-  left: auto;
-  right: 15%;
-  text-align: end;
-}
-#projects .projectCard:nth-child(even) .projectParagraph .badge {
-  justify-content: flex-end;
-}
-#projects .projectCard:nth-child(even) .projectParagraph .badge i,
-#projects .projectCard:nth-child(even) .projectParagraph .badge svg {
-  margin-right: 0px;
-  margin-left: 15px;
-}
-#projects .projectCard:nth-child(even) .projectParagraph_open {
-  right: 58%;
-  transition: 1s ease-out;
-}
-#projects .projectCard:nth-child(even) .openButton {
-  min-height: 100%;
-  background-color: #292929;
-  color: white;
-  border-radius: 0 5px 5px 0;
-  display: flex;
-  align-items: center;
-  padding: 5px;
-  cursor: pointer;
-}
-#projects .projectCard:nth-child(even) .open {
-  width: 850px;
-  transition: width 0.8s;
-}
 #projects .open {
-  width: 850px;
-  transition: width 1s;
+  margin-bottom: -200px;
+  height: 650px;
+  transition: all 1s;
 }
 
 @keyframes slideInLeft {
