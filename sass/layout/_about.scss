@@ -58,3 +58,20 @@
         }
     }
 }
+
+@include for-phone-down{
+    .container{
+        #about{
+            height: 90vh;
+            .presentation{
+                .title{
+                    font-size: 1.4em;
+                }
+
+                .text{
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+}

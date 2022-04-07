@@ -7,7 +7,7 @@
     .container {
         max-width: 1400px;
         margin: 0 auto;
-        padding: 10px;
+        padding: 10px 20px;
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
@@ -87,11 +87,26 @@
     box-shadow: 0 1px 0 0 rgb(17 17 17 / 7%);
 
     .container {
-        padding: 0px 10px !important;
+        padding: 0px 20px !important;
         transition: padding 0.5s;
     }
 }
 
 .sticky + .container {
     padding-top: 106px;
+}
+
+@include for-phone-down{
+    #banner{
+        .container{
+            .name{
+                font-size: 1.5rem;
+            }
+
+            .contact{
+               display: none;  
+            }
+        }
+
+    }
 }

@@ -64,12 +64,13 @@
                 }
             }
         }
+
         .languages {
             display: flex;
             align-items: center;
             flex-direction: column;
             margin: 80px auto;
-            max-width: 300px;
+            width: 350px;
             border-radius: 10px;
             padding: 20px 0;
             background-color: $primary-color-darker;
@@ -115,5 +116,82 @@
         -webkit-transform: translateY(0);
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+@include for-tablet-down{
+
+    #skills{
+        flex-flow: column nowrap;
+
+        .skillCard{
+            order: 1;
+            width: auto;
+
+            .row{
+                width: 15%;
+            }
+        }
+
+        .paragraph{
+            order: 2;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0;
+            position: relative;
+            top: -100px;
+            display: flex;
+
+            .text{
+                min-width: 333px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 50%;
+                margin: 0 20px 0 20px;
+            }
+
+            .languages{
+                width: 300px;
+
+                .row{
+                    display: flex;
+                    flex-flow: column nowrap;
+                    align-items: center;
+
+                    .column{
+                        margin: 10px 0;
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include for-phone-down{
+    #skills{
+        .skillCard{
+            .row{
+                width: 40%;
+                text-align: center;
+            }
+        }
+
+        .paragraph{
+            flex-flow: column nowrap;
+            .text{
+                align-items: flex-start;
+                margin: 0;
+                min-width: 0;
+                max-width: 100%;
+            }
+
+            .languages{
+                min-width: 260px;
+                width: auto;
+            }
+        }
     }
 }
