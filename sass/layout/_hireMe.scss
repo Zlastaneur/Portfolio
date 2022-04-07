@@ -2,7 +2,7 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    padding: 125px 0;
+    padding: 100px 0;
     
     .container{
         max-width: 750px;
@@ -36,5 +36,13 @@
         width: 20%;
         border: 1px solid $primary-color;
         margin: 20px 0;
+    }
+}
+
+@include for-phone-down{
+    #hireMe{
+        .container{
+            text-align: center;
+        }
     }
 }

@@ -259,3 +259,81 @@
         opacity: 1;
     }
 }
+
+@include for-tablet-down{
+    #projects{
+    padding-bottom: 125px;
+
+        .title{
+            margin-bottom: 40px;
+        }
+
+        .projectList{
+            flex-flow: column nowrap;
+
+            .row{
+                flex-flow: column nowrap;
+                margin-bottom: 0px;
+                align-items: center;
+
+                .projectCard{
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
+@include for-phone-down{
+    #projects{
+        .open{
+            height: 550px!important ;
+        }
+
+        .title{
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .projectCard{
+            width: auto;
+            height: 300px;
+
+            .thumbnail{
+                align-items: center;
+                justify-content: center;
+                flex-flow: column nowrap;
+
+                figure{
+                    width: 100%;
+                    max-width: 295px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .website{
+                    width: 100%;
+                    font-size: 1.3em;
+                    margin: 0 0 20px 0;
+                }
+            }
+
+            .projectParagraph{
+                top: 0%;
+                width: 80%;
+                height: auto;
+                max-height: 240px;
+                font-size: 0.9em;
+
+                .badge{
+                    margin: 0;
+                }
+            }
+
+            .projectParagraph_open {
+                top: 55%;
+                transition: all 1s ease;
+            }
+        }
+    }
+}

@@ -594,11 +594,73 @@ a {
     opacity: 1;
   }
 }
+@media screen and (max-width: 1023px) {
+  #projects {
+    padding-bottom: 125px;
+  }
+  #projects .title {
+    margin-bottom: 40px;
+  }
+  #projects .projectList {
+    flex-flow: column nowrap;
+  }
+  #projects .projectList .row {
+    flex-flow: column nowrap;
+    margin-bottom: 0px;
+    align-items: center;
+  }
+  #projects .projectList .row .projectCard {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #projects .open {
+    height: 550px !important;
+  }
+  #projects .title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  #projects .projectCard {
+    width: auto;
+    height: 300px;
+  }
+  #projects .projectCard .thumbnail {
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+  }
+  #projects .projectCard .thumbnail figure {
+    width: 100%;
+    max-width: 295px;
+    display: flex;
+    justify-content: center;
+  }
+  #projects .projectCard .thumbnail .website {
+    width: 100%;
+    font-size: 1.3em;
+    margin: 0 0 20px 0;
+  }
+  #projects .projectCard .projectParagraph {
+    top: 0%;
+    width: 80%;
+    height: auto;
+    max-height: 240px;
+    font-size: 0.9em;
+  }
+  #projects .projectCard .projectParagraph .badge {
+    margin: 0;
+  }
+  #projects .projectCard .projectParagraph_open {
+    top: 55%;
+    transition: all 1s ease;
+  }
+}
 #hireMe {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  padding: 125px 0;
+  padding: 100px 0;
 }
 #hireMe .container {
   max-width: 750px;
@@ -629,14 +691,20 @@ a {
   margin: 20px 0;
 }
 
+@media screen and (max-width: 767px) {
+  #hireMe .container {
+    text-align: center;
+  }
+}
 #footer {
   background-color: #101f47;
   width: 100%;
   color: white;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 #footer .text {
   text-align: center;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
