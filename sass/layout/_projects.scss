@@ -1,7 +1,7 @@
 #projects {
     position: relative;
     background-color: transparent;
-    padding-bottom: 170px;
+    padding-bottom: 200px;
 
     &::before {
         content: "";
@@ -73,6 +73,7 @@
         
                 &.slideRight {
                     animation: slideInRight 750ms ease-in-out both;
+                    top: 5%;
                 }
             }
         }

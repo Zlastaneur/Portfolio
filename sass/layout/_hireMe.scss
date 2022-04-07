@@ -1,0 +1,40 @@
+#hireMe{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 125px 0;
+    
+    .container{
+        max-width: 750px;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+
+        .text{
+            font-size: 1.3em;
+            font-weight: 500;
+        }
+
+        a{
+            color: $secondary-color_lighter;
+        }
+
+        .contact{
+            font-size: 3em;
+            font-weight: 400;
+
+            a:hover > i {
+                color: $secondary-color;
+                transition: color 150ms ease-in-out;
+            }
+        }
+    }
+
+    .line{
+        width: 20%;
+        border: 1px solid $primary-color;
+        margin: 20px 0;
+    }
+}

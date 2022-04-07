@@ -3,6 +3,10 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Montserrat", "Roboto", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
 }
 
 *,
@@ -166,6 +170,9 @@ a {
   font-size: 1.3em;
   font-weight: 400;
 }
+#about .presentation .text .OC {
+  font-weight: 500;
+}
 
 #skills {
   display: flex;
@@ -276,7 +283,7 @@ a {
 #projects {
   position: relative;
   background-color: transparent;
-  padding-bottom: 170px;
+  padding-bottom: 200px;
 }
 #projects::before {
   content: "";
@@ -395,6 +402,7 @@ a {
 }
 #projects .projectCard.js-scroll.scrolled.slideRight {
   animation: slideInRight 750ms ease-in-out both;
+  top: 5%;
 }
 #projects .projectCard .thumbnail {
   z-index: 20;
@@ -505,6 +513,50 @@ a {
     transform: translateX(0);
     opacity: 1;
   }
+}
+#hireMe {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 125px 0;
+}
+#hireMe .container {
+  max-width: 750px;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+#hireMe .container .text {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+#hireMe .container a {
+  color: #484848;
+}
+#hireMe .container .contact {
+  font-size: 3em;
+  font-weight: 400;
+}
+#hireMe .container .contact a:hover > i {
+  color: #292929;
+  transition: color 150ms ease-in-out;
+}
+#hireMe .line {
+  width: 20%;
+  border: 1px solid #152654;
+  margin: 20px 0;
+}
+
+#footer {
+  background-color: #101f47;
+  width: 100%;
+  color: white;
+  padding: 10px 0;
+}
+#footer .text {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
