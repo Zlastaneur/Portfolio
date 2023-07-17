@@ -107,30 +107,7 @@ a {
 #banner .portfolio {
   display: flex;
   justify-content: center;
-  background-color: #213364;
-  max-height: 70px;
-}
-#banner .portfolio p {
   text-align: center;
-  color: white;
-}
-#banner .portfolio a {
-  display: inline-block;
-  margin-left: 5px;
-  color: white;
-  text-decoration: none;
-  font-weight: bolder;
-}
-#banner .portfolio a::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 1px;
-  background: #ffffff;
-  transition: width 0.2s ease-in;
-}
-#banner .portfolio a:hover::after {
-  width: 100%;
 }
 
 .sticky {
@@ -317,12 +294,10 @@ a {
 
 @keyframes fadeInBottom {
   0% {
-    -webkit-transform: translateY(50px);
     transform: translateY(50px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0px);
     opacity: 1;
   }
@@ -401,7 +376,8 @@ a {
   width: 100%;
   max-width: 100%;
   height: calc(100% + 100px);
-  clip-path: polygon(0% 0%, 100% 75px, 100% 100%, 0% calc(100% - 75px));
+  -webkit-clip-path: polygon(0% 0%, 100% 75px, 100% 100%, 0% calc(100% - 75px));
+          clip-path: polygon(0% 0%, 100% 75px, 100% 100%, 0% calc(100% - 75px));
   background-color: #152654;
   /* background-image: url(../../public/img/background_cover.jpg);
   background-size: cover;
@@ -733,6 +709,4 @@ a {
 #footer .text {
   text-align: center;
   margin: 0;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */
