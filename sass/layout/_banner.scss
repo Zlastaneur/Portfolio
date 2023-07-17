@@ -78,6 +78,39 @@
             font-weight: 600;
         }
     }
+
+    .portfolio{
+        display: flex;
+        justify-content: center;
+        background-color: #213364;
+        max-height: 70px;
+
+        p{
+        text-align: center;
+        color: white;
+        }
+
+        a{
+            display: inline-block;
+            margin-left: 5px;
+            color: white;
+            text-decoration: none;
+            font-weight: bolder;
+        }
+
+        a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            background: #ffffff;
+            transition: width .2s ease-in;
+          }
+
+          a:hover::after {
+            width: 100%;
+          }
+    }
 }
 
 .sticky {
